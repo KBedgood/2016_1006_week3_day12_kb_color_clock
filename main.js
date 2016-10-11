@@ -2,14 +2,15 @@ function renderTime() {
 
 	var currentTime = new Date ();
 	var amPM = "AM";
-	var hour = current.Time.getHours ();
+	var hour = currentTime.getHours ();
 	var minutes = currentTime.getMinutes();
 	var seconds = currentTime.getSeconds();
 
 if (hour === 0) {
-h = 12;
+	hour = 12;
 }
-else (hour > 12) {
+else (hour > 12) 
+{
 	hour = hour - 12;
 	amPM = "PM";
 }
@@ -19,20 +20,18 @@ if (hour < 10) {
 }
 
 if (minutes < 10) {
-	minutes = "0" + hour;
+	minutes = "0" + minutes;
 }
 
 if (seconds < 10) {
-	seconds= "0" + hour;
+	seconds= "0" + seconds;
 }
 
-var myClock = document.getElementById("currentTIme");
+var myClock = document.getElementById("currentTime");
 myClock.innerHTML = hour + ":" + minutes + ":" + seconds + amPM;
-
-setTimeout ("renderTime"(),1000);
-
 }
 
+setInterval (renderTime,1000);
 
 // moment(shirt.date).format("MMMM Do YYYY, h:mm a");
 

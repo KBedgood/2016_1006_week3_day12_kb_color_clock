@@ -1,27 +1,43 @@
 @import "mixins";
-// fonts weights available: Ubuntu:400,400i,700
-
-// body {
-//             // font-family: 'Ubuntu', sans-serif;
-//             line-height: 1.4em;
-// }
-
+// font-family: 'Monoton', cursive;
+.container-fluid,
+.row,
+.col {
+            background-color: black;
+}
 
 .currentTime {
-      display: block;
-      text-align: center;
-      font-size: 81px;
-      color: black;
-      margin-top: 80px;
+            font-family: 'Fredericka the Great', cursive;
+            letter-spacing: .09em;
+            display: block;
+            text-align: center;
+            font-size: 100px;
+            color: white;
+            margin-top: 80px;
 }
 
+.button {
+            font-size: 11px;
+            letter-spacing: .3em;
+            color: white;
+            margin: 0px auto;
+            display: block;
+            background-color: #E43D96;
+            padding: 8px;
+}
 
 .footer {
-@include footer();
+            @include footer();
+            color: white;
+            margin-bottom: 100%;
+            margin-top: 300px;
 }
 
-@media (max-width: 768px) {
- 
-
-
+@media (max-width: 600px) {
+            .currentTime {
+                        font-size: 44px;
+            }
+            .footer {
+                        font-size: 9px;
+            }
 }
