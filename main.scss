@@ -1,0 +1,27 @@
+@import "mixins";
+// fonts weights available: Ubuntu:400,400i,700
+
+// body {
+//             // font-family: 'Ubuntu', sans-serif;
+//             line-height: 1.4em;
+// }
+
+
+.currentTime {
+      display: block;
+      text-align: center;
+      font-size: 81px;
+      color: black;
+      margin-top: 80px;
+}
+
+
+.footer {
+@include footer();
+}
+
+@media (max-width: 768px) {
+ 
+
+
+}
